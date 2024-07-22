@@ -13,23 +13,25 @@
 @media (max-width: 600px) {
   .header-container {
     flex-direction: column;
-    justify-content: flex-start;
   }
 }
 body {
   font-family: "Inter", sans-serif;
   background-color: hsl(230, 17%, 14%);
   margin: 0;
+  overflow-y: auto;
 }
 .container {
   max-width: 1440px;
   margin: 0 auto;
   height: auto;
+  padding: 15px;
 }
 h2 {
   margin-bottom: 0;
-  margin-top: 0;
   font-weight: 700;
+  color: var(--dark-theme-white-text);
+  margin-top: 15px;
 }
 .grey-text {
   font-size: 14px;
@@ -118,4 +120,41 @@ h1 {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 30px;
   margin-top: 20px;
+}
+.over-view-container {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(150px, 1fr));
+  grid-gap: 20px;
+}
+.top-text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.num-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.green-per {
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+.small-green {
+  color: hsl(163, 72%, 41%);
+  font-weight: 600;
+}
+.lighter-text {
+  color: var(--dark-theme-text-color);
+  font-weight: 600;
+}
+h3 {
+  color: var(--dark-theme-white-text);
+  font-weight: 700;
+}
+.card-overview {
+  background-color: var(--dark-theme-card-bg);
+  padding: 10px;
+  border-radius: 8px;
 }
