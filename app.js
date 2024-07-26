@@ -8,6 +8,7 @@ let bodyBg = document.querySelector("body");
 let handle = document.getElementsByClassName("handle");
 let smallerDivsBg = document.querySelectorAll(".overView");
 let inputLabel = document.querySelector("label");
+
 let isDarkMode = false;
 
 inputCheckBox.addEventListener("click", toggleMode);
@@ -32,7 +33,9 @@ function toggleMode() {
     smallerDivsBg.forEach((overView) => {
       overView.style.backgroundColor = "hsl(228, 28%, 20%)";
     });
-    inputLabel.style.color = "hsl(0, 0%, 100%)";
+    inputCheckBox.style.backgroundColor = "hsl(228, 28%, 20%)";
+    inputCheckBox.innerText = "Dark Mode";
+    inputCheckBox.style.color = "hsl(0, 0%, 100%)";
   } else {
     // Light mode styles
     bodyBg.style.backgroundColor = "hsl(0, 0%, 100%)";
@@ -51,6 +54,8 @@ function toggleMode() {
     smallerDivsBg.forEach((overView) => {
       overView.style.backgroundColor = "hsl(227, 47%, 96%)";
     });
-    inputLabel.style.color = "hsl(230, 17%, 14%)";
+    inputCheckBox.innerText = "Light mode";
+    inputCheckBox.style.backgroundColor = "hsl(227, 47%, 96%)";
+    inputCheckBox.style.color = "hsl(230, 17%, 14%)";
   }
 }
